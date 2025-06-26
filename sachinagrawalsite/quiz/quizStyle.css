@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+body {
+  text-align: justify;
+  font-family: "Montserrat", serif;
+  padding: 20px;
+  color: #0f3d0f;
+  background-color: lightgreen;
+  margin: 0px;
+}
+
+img:not(.snowflake) {
+  width: 100px;
+}
+
+p {
+  display: inline-block;
+  border: 2px solid black;
+  background-color: white;
+  padding: 2px 3px;
+  text-align: center;
+}
+
+p.selected {
+  background-color: red;
+}
+
+p.selected.correct {
+  background-color: green;
+}
+
+h1,
+h3,
+h4 {
+  text-align: center;
+}
+
+.header {
+  border: 2px solid black;
+  color: #0f3d0f;
+  margin: 8px;
+  padding: 15px;
+}
+
+.questions {
+  border: 2px solid black;
+  margin: 8px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.answers {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.zerotopmargin {
+  margin-top: 0;
+}
+
+.instructions {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.submit {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.button {
+  width: 100%;
+  font-size: 16px;
+  background-color: lightgray;
+  font-family: "Montserrat", serif;
+}
+
+.snowflake {
+  width: 40px;
+}
+
+#snowflake {
+  display: none;
+}
+
+.centertext {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 95%;
+}

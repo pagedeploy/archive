@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+body {
+  font-family: "Montserrat", serif;
+  padding: 20px;
+  color: #0f3d0f;
+  background-color: lightgreen;
+  margin: 0px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px;
+}
+
+h4 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.zerobottommargin {
+  margin-bottom: 0;
+}
+
+.controls {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.controls li {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gamesection,
+.quizsection {
+  flex: 1;
+  margin: 8px;
+  padding: 15px;
+  border: 2px solid black;
+  text-align: justify;
+  box-sizing: border-box;
+}
+
+/* Media query for smaller devices */
+@media screen and (max-width: 600px) {
+  .gamesection,
+  .quizsection {
+    flex: 100%;
+  }
+}
+
+.instructions {
+  text-align: left;
+}
+
+.centerimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 40%;
+}
+
+.centertext {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 95%;
+}
