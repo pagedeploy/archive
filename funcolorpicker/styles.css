@@ -1,0 +1,80 @@
+html,
+body {
+  background-color: #c0caff;
+  font-family: 'Hanken Grotesk', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  padding: 0px 20px 0px 20px;
+}
+
+h1 {
+  font-size: 70px;
+  margin: -30px 0px 10px 0px;
+  color: #0000FF;
+}
+
+p {
+  font-size: 18px;
+  margin: 0;
+}
+
+form {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 14px;
+  min-width: 200px;
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+  flex: 1 1 auto;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #eeeeee;
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: #000000;
+}
+
+a {
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+#color-status {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.bottom-logo {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 64px;
+  height: auto;
+  z-index: 9999;
+  pointer-events: none;
+}
