@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Loading ...</title>
+    <link 
+      rel="icon" 
+      href="https://github.com/pagedeploy/cdn/blob/main/autoplay/favicon.png?raw=true" 
+      type="image/png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500"
+      rel="stylesheet"
+    />
+
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: white;
+        color: #444;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+      }
+      
+      .spinner {
+        border: 8px solid #ccc;
+        border-top-color: #25cf88;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1s linear infinite;
+        margin: 30px 0px 30px 0px;
+      }
+
+      @keyframes spin {
+        0% { 
+          transform: rotate(0deg); 
+        }
+        100% { 
+          transform: rotate(360deg); 
+        }
+      }
+
+      button {
+        background-color: #25cf88;
+        color: white;
+        border: none;
+        padding: 12px 16px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      video {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-weight: 500;
+        margin: 0px;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0px 0px 30px 0px;
+      }
+
+      .loadingScreen {
+        margin: 0px 20px 0px 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loadingScreen" class="parent">
+      <h1>Loading ...</h1>
+      <div class="spinner"></div>
+      <h2>Please wait while we check your browser.</h2>
+      <button onclick="playVideo()">Proceed manually</button>
+    </div>
+
+    <div id="videoContainer" class="parent" style="display:none;">
+      <video id="mainVideo" autoplay playsinline>
+        <source src="https://github.com/pagedeploy/cdn/raw/refs/heads/main/autoplay/song720p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script>
+      function playVideo() {
+        document.getElementById('loadingScreen').style.display = 'none';
+        const videoContainer = document.getElementById('videoContainer');
+        const video = document.getElementById('mainVideo');
+
+        videoContainer.style.display = 'flex';
+
+        video.muted = false;
+        video.play().catch(err => {
+          alert("Browser blocked autoplay. Click to play the video.");
+        });
+
+        document.title = "Get Rickrolled!";
+
+        const link = document.createElement("link");
+        link.rel = "icon";
+        link.href = "https://github.com/pagedeploy/cdn/blob/main/autoplay/rickastley.png?raw=true";
+        link.type = "image/png";
+
+        const oldLinks = document.querySelectorAll("link[rel*='icon']");
+        oldLinks.forEach(l => l.remove());
+        document.head.appendChild(link);
+      }
+    </script>
+  </body>
+</html>
