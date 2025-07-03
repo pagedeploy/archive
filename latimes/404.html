@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta property="og:title" content="Los Angeles Times" />
+    <meta
+      property="og:description"
+      content="Leading source of breaking news, entertainment, sports, politics, and more for Southern California and the world."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/pagedeploy/cdn/blob/main/archive/other/latimes.png?raw=true"
+    />
+    <meta property="og:url" content="https://latimes.page" />
+    <meta property="og:type" content="website" />
+
+
+    <title>Los Angeles Times</title>
+    <link
+      rel="icon"
+      href="https://github.com/pagedeploy/cdn/blob/main/archive/other/icon.png?raw=true"
+    />
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #1a1a1a;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .video-wrapper {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1a1a1a;
+      }
+
+      video {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        display: block;
+      }
+
+      .mute-toggle {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        z-index: 10;
+        font-family: 'Open Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="mute-toggle" id="muteBtn">Unmute</button>
+
+    <div class="video-wrapper">
+      <video id="video" autoplay playsinline>
+        <source src="https://github.com/pagedeploy/cdn/raw/refs/heads/main/autoplay/song720p.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script>
+      const video = document.getElementById("video");
+      const muteBtn = document.getElementById("muteBtn");
+
+      video.muted = false;
+      video.play().catch(() => {
+        video.muted = true;
+        video.play();
+        muteBtn.textContent = "Unmute";
+      });
+
+      muteBtn.addEventListener("click", () => {
+        video.muted = false;
+        muteBtn.remove();
+      });
+    </script>
+  </body>
+</html>

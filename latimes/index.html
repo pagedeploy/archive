@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta property="og:title" content="Custom Rickroll Generator" />
+    <meta
+      property="og:description"
+      content="Create your own fake LA Times headline that actually links to a rickroll."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/pagedeploy/cdn/blob/main/archive/other/rickastley.png?raw=true"
+    />
+    <meta property="og:url" content="https://latimes.page" />
+    <meta property="og:type" content="website" />
+
+
+    <title>Custom Rickroll Generator</title>
+    <link
+      rel="icon"
+      href="https://github.com/pagedeploy/cdn/blob/main/archive/other/rickastley.png?raw=true"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" 
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">LA Times</h1>
+      <h3 class="subtitle">Custom Rickroll Generator</h3>
+      <p class="description">
+        Write a compelling headline, select a category, and generate your rickroll link.
+      </p>
+      <div class="box">
+        <div class="form-group">
+          <input type="text" id="headline" placeholder="Your sensational news headline here" />
+          <select id="category">
+            <option>Breaking</option>
+            <option>Arts</option>
+            <option>Business</option>
+            <option>Cars</option>
+            <option>Culture</option>
+            <option>Entertainment</option>
+            <option>Food</option>
+            <option>Local</option>
+            <option>Movies</option>
+            <option>Music</option>
+            <option>Opinion</option>
+            <option>Science</option>
+            <option>Sports</option>
+            <option>Tech</option>
+            <option>Travel</option>
+          </select>
+        </div>
+        <div class="link-bar" onclick="copyLink()">
+          <img src="https://www.svgrepo.com/show/509341/copy.svg" alt="Copy Icon" class="copy-icon" />
+          <span id="link-display">https://latimes.page/breaking/your-sensational-news-headline-here</span>
+        </div>
+      </div>
+      <p class="footer">
+        Created by Scinovus Crafted based on the original by Jeff Keen.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
